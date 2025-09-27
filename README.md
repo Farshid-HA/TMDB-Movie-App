@@ -7,7 +7,7 @@ This project consists of a backend (ASP.NET Core) and a frontend (Angular) for i
 
 ## Running the Project with Docker
 
-1. In the backend folder, in the appsettings.json, replcae the stars with real API key. 
+1. In the backend folder, in the appsettings.json, replace the stars with a real API key. 
 2. Open a terminal in the root directory of the project (where `docker-compose.yml` is located).
 3. Run the following command:
 
