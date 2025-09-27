@@ -1,0 +1,58 @@
+.details-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.poster {
+    width: 300px;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.overview {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.genres span {
+    display: inline-block;
+    background: #eee;
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.rating {
+    font-size: 1.2rem;
+    color: #f39c12;
+    margin: 0.5rem 0;
+}
+
+.release,
+.runtime,
+.language {
+    color: #888;
+    margin: 0.2rem 0;
+}
+
+.error {
+    color: red;
+    margin: 1rem 0;
+}
+
+.back-btn {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #007bff;
+}

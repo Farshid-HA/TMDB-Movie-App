@@ -1,0 +1,28 @@
+<div class="home-container">
+
+  <div class="search-bar-wrapper">
+    <input [(ngModel)]="searchTerm" (keyup.enter)="onSearch()" placeholder="Search movies..." class="search-bar" />
+    <button *ngIf="searchTerm" class="clear-btn" (click)="clearSearch()" aria-label="Clear search">&#10005;</button>
+    <button (click)="onSearch()" class="search-btn" aria-label="Search">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="9" cy="9" r="7" stroke="#333" stroke-width="2"/>
+        <line x1="14.4142" y1="14" x2="18" y2="17.5858" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <h2>{{ listTitle }}</h2>
+  <ul class="movie-list">
+    <li *ngFor="let movie of movies" (click)="goToDetails(movie)">
+  <img [src]="imageBaseUrl + movie.poster_path" alt="Poster" />
+      <div>
+        <div class="title">{{ movie.title }}</div>
+        <div class="release">{{ movie.release_date }}</div>
+        <div class="rating">⭐ {{ movie.vote_average }}</div>
+      </div>
+    </li>
+  </ul>
+</div>

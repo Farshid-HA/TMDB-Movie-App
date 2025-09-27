@@ -1,0 +1,15 @@
+<div class="details-container" *ngIf="movie">
+  <button class="back-btn" (click)="goBack()" aria-label="Back to home">&#8592;</button>
+  <h1>{{ movie.title }}</h1>
+  <div class="release">Release Date: {{ movie.release_date }}</div>
+  <img [src]="imageBaseUrl + movie.poster_path" alt="Poster" class="poster" />
+  <div class="overview">{{ movie.overview }}</div>
+  <div class="genres">
+    <span *ngFor="let g of movie.genres">{{ g.name }}</span>
+  </div>
+  <div class="rating">⭐ {{ movie.vote_average }}</div>
+  <div class="runtime">Runtime: {{ runtimeStr }}</div>
+  <div class="language">Language: {{ movie.original_language | uppercase }}</div>
+</div>
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
